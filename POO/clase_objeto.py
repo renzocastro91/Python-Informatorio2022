@@ -363,3 +363,5 @@ nuevo_pastel = Pastel(["Harina","Leche","Huevo","Azucar"],4)
 print(nuevo_pastel.ingredientes)
 print(nuevo_pastel.tamanio)
 print(nuevo_pastel.tamanio_area(12))"""
+
+https://www.youtube.com/watch?v=gDGdRXLbFKs&list=PLg9145ptuAigw5pV_DRznXdOsX19dorDs&index=14
