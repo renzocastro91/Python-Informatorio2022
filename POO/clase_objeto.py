@@ -221,4 +221,4 @@ ejemplo1 = Raiz()
 ejemplo1.ingresardato()
 ejemplo1.cuadrada()"""
 
-https://www.youtube.com/watch?v=lmu-7VWF34Y&list=PLg9145ptuAigw5pV_DRznXdOsX19dorDs&index=10
+"""Esto es una prueba de que funciona correctamente"""
