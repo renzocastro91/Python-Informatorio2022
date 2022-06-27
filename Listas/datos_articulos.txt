@@ -1,0 +1,25 @@
+1,{'Articulo': 'Arroz', 'Marca': '123', 'Precio': 15.2, 'Stock': 195}
+2,{'Articulo': 'Polenta', 'Marca': 'AER', 'Precio': 10.2, 'Stock': 200}
+3,{'Articulo': 'Aceite', 'Marca': 'Vicentin', 'Precio': 40.5, 'Stock': 195}
+4,{'Articulo': 'Arroz', 'Marca': '48-O', 'Precio': 20.0, 'Stock': 190}
+5,{'Articulo': 'Pan Lactal', 'Marca': 'Bimbo', 'Precio': 50.5, 'Stock': 186}
+6,{'Articulo': 'Vinagre', 'Marca': '4547-P', 'Precio': 60.65, 'Stock': 194}
+7,{'Articulo': 'Pan', 'Marca': 'Laica', 'Precio': 200.25, 'Stock': 200}
+8,{'Articulo': 'Papas Fritas', 'Marca': 'Lays', 'Precio': 150.15, 'Stock': 194}
+9,{'Articulo': 'Polenta', 'Marca': 'Presto Pronta', 'Precio': 25.25, 'Stock': 187}
+10,{'Articulo': 'Dulce de Leche', 'Marca': 'Treinta', 'Precio': 75.0, 'Stock': 200}
+11,{'Articulo': 'Harina AAA', 'Marca': 'Blanca Flor', 'Precio': 100.25, 'Stock': 189}
+12,{'Articulo': 'Harina Leudante', 'Marca': 'Blanca Flor', 'Precio': 125.25, 'Stock': 195}
+13,{'Articulo': 'Caramelos', 'Marca': 'UA-125', 'Precio': 25.0, 'Stock': 172}
+14,{'Articulo': 'Chizitos', 'Marca': 'Bombastica', 'Precio': 75.25, 'Stock': 200}
+15,{'Articulo': 'Palitos Salados', 'Marca': 'D-157', 'Precio': 80.25, 'Stock': 192}
+16,{'Articulo': 'Caramelos', 'Marca': '48745A', 'Precio': 60.25, 'Stock': 200}
+17,{'Articulo': 'Harina AAA', 'Marca': 'Reforzada', 'Precio': 150.25, 'Stock': 200}
+18,{'Articulo': 'Papas Fritas', 'Marca': 'Argenta', 'Precio': 100.25, 'Stock': 200}
+19,{'Articulo': 'Jabon', 'Marca': 'Axe', 'Precio': 80.25, 'Stock': 183}
+20,{'Articulo': 'Jabon', 'Marca': 'Man', 'Precio': 87.5, 'Stock': 200}
+21,{'Articulo': 'Manteca', 'Marca': 'Genial', 'Precio': 100.25, 'Stock': 195}
+23,{'Articulo': 'Alfajor', 'Marca': 'Jorgito', 'Precio': 30.5, 'Stock': 200}
+24,{'Articulo': 'Turron', 'Marca': 'Cuco', 'Precio': 25.5, 'Stock': 200}
+25,{'Articulo': 'Arroz Integral', 'Marca': '789', 'Precio': 200.25, 'Stock': 186}
+26,{'Articulo': 'Papas Fritas', 'Marca': '678', 'Precio': 220.25, 'Stock': 195}

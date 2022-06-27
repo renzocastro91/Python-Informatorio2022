@@ -1,0 +1,7 @@
+1,{'MontoAcumulado': 50000, 'Fecha': '2022-06-16'}
+2,{'MontoAcumulado': 50000, 'Fecha': '2022-06-17'}
+3,{'MontoAcumulado': 55000, 'Fecha': '2022-06-18'}
+4,{'MontoAcumulado': 60000, 'Fecha': '2022-06-19'}
+5,{'MontoAcumulado': 1129.25, 'Fecha': '2022-06-21'}
+6,{'MontoAcumulado': 252.5, 'Fecha': '2022-06-21'}
+7,{'MontoAcumulado': 727.75, 'Fecha': '2022-06-26'}

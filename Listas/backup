@@ -1,0 +1,29 @@
+1,{'Articulo': 'Arroz', 'Marca': '123', 'Precio': 15.20, 'Stock':90}
+2,{'Articulo': 'Polenta', 'Marca': 'AER', 'Precio': 10.20, 'Stock':90}
+3,{'Articulo': 'Aceite', 'Marca': 'Vicentin', 'Precio': 40.50, 'Stock':90}
+4,{'Articulo': 'Arroz', 'Marca': '48-O', 'Precio': 20.00, 'Stock':90}
+5,{'Articulo': 'Pan Lactal', 'Marca': 'Bimbo', 'Precio': 50.50, 'Stock':90}
+6,{'Articulo': 'Vinagre', 'Marca': '4547-P', 'Precio': 60.65, 'Stock':90}
+7,{'Articulo': 'Pan', 'Marca': 'Laica', 'Precio': 200.25, 'Stock':90}
+8,{'Articulo': 'Papas Fritas', 'Marca': 'Lays', 'Precio': 150.15, 'Stock':90}
+9,{'Articulo': 'Polenta', 'Marca': 'Presto Pronta', 'Precio': 25.25, 'Stock':90}
+10,{'Articulo': 'Dulce de Leche', 'Marca': 'Treinta', 'Precio': 75.00, 'Stock':90}
+11,{'Articulo': 'Harina AAA', 'Marca': 'Blanca Flor', 'Precio': 100.25, 'Stock':90}
+12,{'Articulo': 'Harina Leudante', 'Marca': 'Blanca Flor', 'Precio': 125.25, 'Stock':90}
+13,{'Articulo': 'Caramelos', 'Marca': 'UA-125', 'Precio': 25.00, 'Stock':90}
+14,{'Articulo': 'Chizitos', 'Marca': 'Bombastica', 'Precio': 75.25, 'Stock':90}
+15,{'Articulo': 'Palitos Salados', 'Marca': 'D-157', 'Precio': 80.25, 'Stock':90}
+16,{'Articulo': 'Caramelos', 'Marca': '48745A', 'Precio': 60.25, 'Stock':90}
+17,{'Articulo': 'Harina AAA', 'Marca': 'Reforzada', 'Precio': 150.25, 'Stock':90}
+18,{'Articulo': 'Papas Fritas', 'Marca': 'Argenta', 'Precio': 100.25, 'Stock':90}
+19,{'Articulo': 'Jabon', 'Marca': 'Axe', 'Precio': 80.25, 'Stock':90}
+20,{'Articulo': 'Jabon', 'Marca': 'Man', 'Precio': 87.50, 'Stock':90}
+21,{'Articulo': 'Manteca', 'Marca': 'Genial', 'Precio': 100.25, 'Stock':90}
+22,{'Articulo': 'Turron', 'Marca': 'Forte', 'Precio': 25.25, 'Stock':90}
+23,{'Articulo': 'Alfajor', 'Marca': 'Jorgito', 'Precio': 30.50, 'Stock':90}
+24,{'Articulo': 'Turron', 'Marca': 'Cuco', 'Precio': 25.50, 'Stock':90}
+
+1,{'MontoAcumulado': 50000, 'Fecha': '2022-06-16'}
+2,{'MontoAcumulado': 50000, 'Fecha': '2022-06-17'}
+3,{'MontoAcumulado': 55000, 'Fecha': '2022-06-18'}
+4,{'MontoAcumulado': 60000, 'Fecha': '2022-06-19'}

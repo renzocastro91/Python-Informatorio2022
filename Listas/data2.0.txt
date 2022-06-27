@@ -1,0 +1,7 @@
+Renzo,{'Telefono1': 3624948616, 'Telefono2': 5656565656, 'Direccion1': 'Calle 1', 'Direccion2': 'Calle Larga'}
+Ayelen,{'Telefono1': 3432484215, 'Telefono2': 0, 'Direccion1': 'Calle 1', 'Direccion2': 'Calle Verde'}
+Julia,{'Telefono1': 54545454, 'Telefono2': 5645454545, 'Direccion1': 'Calle Ancha', 'Direccion2': ''}
+Roberto,{'Telefono1': 54545454545, 'Telefono2': 0, 'Direccion1': 'Calle 20', 'Direccion2': ''}
+Horacio,{'Telefono1': 5454545454, 'Telefono2': 0, 'Direccion1': 'Calle Angosta', 'Direccion2': ''}
+Lucia,{'Telefono1': 5454545454, 'Telefono2': 0, 'Direccion1': 'Calle 123', 'Direccion2': ''}
+Amalia,{'Telefono1': 54544875, 'Telefono2': 0, 'Direccion1': 'Calle J', 'Direccion2': ''}
