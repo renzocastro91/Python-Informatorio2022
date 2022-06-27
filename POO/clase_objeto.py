@@ -236,4 +236,130 @@ print(isinstance(objeto,Calculadora))"""
 """print(issubclass(Op_basicas,Calculadora))"""
 
 
-https://www.youtube.com/watch?v=lLnpY5LOk10&list=PLg9145ptuAigw5pV_DRznXdOsX19dorDs&index=11
+#Herencia Múltiple
+"""
+class Base_uno:
+    pass
+class Base_dos:
+    pass
+class DerivadoMultiple(Base_uno,Base_dos):
+    pass
+"""
+"""
+class Telefono:
+    def __init__(self):
+        pass
+    def llamar(self):
+        print("Llamando...")
+    def ocupado(self):
+        print("Ocupado....")
+
+class Camara:
+    def __init__(self):
+        pass
+    def fotografia(self):
+        print("Tomando Fotos...")
+
+class Reproduccion:
+    def __init__(self):
+        pass
+    def reproducciondemusica(self):
+        print("Reproduciendo música...")
+    def reproduciondevideo(self):
+        print("Reproducciendo video...")
+
+class Smartphone(Telefono,Camara,Reproduccion):
+    def __del__(self):
+        print("Teléfono Apagado")
+
+movil = Smartphone()
+#print(dir(movil))
+movil.fotografia()
+movil.llamar()
+"""
+#Herencia Multinivel
+"""
+class Base:
+    pass
+class Derivado_uno(Base):
+    pass
+class Derivado_dos(Derivado_uno):
+    pass
+"""
+
+#f-strings
+#format %
+
+"""curso = "Python"
+print("Tutoriales de % s"%curso)"""
+
+"""nombre = "Renzo"
+edad = 25"""
+#print("Hola soy, % s y tengo % s"%(nombre,edad))
+#print("Que tal, soy {} y mi edad es {} años.".format(nombre,edad))
+#print(f"Hola, soy {nombre}, y tengo {edad} años.")
+
+# __str__ y __repr__
+"""class Estudiante:
+    def __init__(self,nombre,apellido,edad):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.edad = edad
+
+    #Representación informal de una cadena se utiliza para imprimir un objeto(los atributos que queremos que se vean)
+    #def __str__(self):
+    #no entendí bien, pero dice que el __repr__ respeta la identidad de los atributos que están en juego en juego dentro del método
+    def __repr__(self):
+        return f"Hola soy {self.nombre} {self.apellido}, y tengo {self.edad} años."
+
+nuevo_estudiante = Estudiante("Renzo","Castro",31)
+
+print(f"{nuevo_estudiante}") # Para el __str__
+print(f"{nuevo_estudiante !r}")
+"""
+
+#Métodos de clase --> éste método puede ser llamado sin crear una instancia de la clase
+
+
+
+
+"""class Pastel:
+    def __init__(self,ingredientes):
+        self.ingredientes = ingredientes
+    
+    def __repr__(self):
+        return f"pastel({self.ingredientes !r})"
+
+    #Forma de etiquetar a los métodos de clase
+    @classmethod
+    def Pastel_chocolate(cls):
+        return cls(["Harina","Leche","Huevo","Chocolate"])
+    
+    @classmethod
+    def Pastel_vainilla(cls):
+        return cls(["Harina","Leche","Huevo","Vainilla"])
+    
+
+print(Pastel.Pastel_chocolate())"""
+    
+
+#Métodos estáticos --> pueden ser llamados sin tener una instancia de la clase, además este tipo de métodos no tienen acceso al exterior
+"""import math
+class Pastel:
+    def __init__(self,ingredientes,tamanio):
+        self.ingredientes = ingredientes
+        self.tamanio = tamanio
+    def __repr__(self):
+        return(f"Pastel({self.ingredientes}, "f"{self.tamanio})")
+    
+    def area(self):
+        return self.tamanio_area(self.tamanio)
+
+    @staticmethod
+    def tamanio_area(A):
+        return A ** 2 * math.pi 
+
+nuevo_pastel = Pastel(["Harina","Leche","Huevo","Azucar"],4)
+print(nuevo_pastel.ingredientes)
+print(nuevo_pastel.tamanio)
+print(nuevo_pastel.tamanio_area(12))"""
