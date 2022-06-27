@@ -209,9 +209,9 @@ class Raiz(Calculadora):
     def cuadrada(self):
         import math
         a, = self.datos
-        print(f"El resultado es: {math.sqrt(a)}")
+        print(f"El resultado es: {math.sqrt(a)}")"""
 
-print("Operaciones básicas Producto")
+"""print("Operaciones básicas Producto")
 ejemplo = Op_basicas()
 ejemplo.ingresardato()
 ejemplo.producto()
@@ -221,6 +221,18 @@ ejemplo1 = Raiz()
 ejemplo1.ingresardato()
 ejemplo1.cuadrada()"""
 
-"""Esto es una prueba de que funciona correctamente"""
+#Funciones integradas para herencia
 
-"""Realmente funciona?"""
+"""objeto = Op_basicas()"""
+
+#Función isinstance(objeto,clase) --> devuelve True o False si el objeto es o no instancia de la clase puesta como parámetro
+
+"""print(isinstance(objeto,Op_basicas))
+print(isinstance(objeto,Raiz))
+print(isinstance(objeto,Calculadora))"""
+
+#Función issubclass(clase_hijo, clase_padre) --> devuelve True o False si la clase puesta como 1er parámetro es subclase de la clase que se pone como 2do parámetro
+
+"""print(issubclass(Op_basicas,Calculadora))"""
+
+https://www.youtube.com/watch?v=lLnpY5LOk10&list=PLg9145ptuAigw5pV_DRznXdOsX19dorDs&index=11
