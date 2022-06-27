@@ -235,4 +235,6 @@ print(isinstance(objeto,Calculadora))"""
 
 """print(issubclass(Op_basicas,Calculadora))"""
 
+"""Cambios para guardar en nuevo repositorio"""
+
 https://www.youtube.com/watch?v=lLnpY5LOk10&list=PLg9145ptuAigw5pV_DRznXdOsX19dorDs&index=11
