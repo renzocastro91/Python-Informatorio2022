@@ -110,12 +110,11 @@ class Motocicleta(Bicicleta):
 
 def catalogar(lista, ruedas=-1):
     if ruedas == -1:
-        from pprint import pprint
         for i in lista:
             print(f"El objeto es de la clase --> {type(i).__name__}")
-            print(i)
             print("Atributos:")
-            pprint(dir(i))
+            print(i)
+
     else:
         cont = 0
         for i in lista:
@@ -146,3 +145,6 @@ catalogar(vehiculos)
 catalogar(vehiculos, 0)
 catalogar(vehiculos, 2)
 catalogar(vehiculos, 4)
+
+# El ejercicio lo interpreté mal yo, cuando habla de atributos, habla de los datos inherentes al objeto, por lo tanto
+# Solo hay que mostrar los datos no los métodos, ya está arreglado
