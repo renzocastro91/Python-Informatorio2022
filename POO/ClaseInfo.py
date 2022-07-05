@@ -106,3 +106,7 @@ class Profesor(Persona):
 
     def setAntiguedad(self, nuevo):
         self.antiguedad = nuevo
+
+
+# Guía Práctica
+https: // sites.google.com/view/informatorio-poo/p % C3 % A1gina-principal?authuser = 6
