@@ -1,14 +1,15 @@
-1,Arroz,125.20,1
-2,Pan,150,1
-3,Jabon,50,1
-4,Champu,200,1
-5,Pasta de dientes,120,1
-6,Carne,500,1
-7,Huevo,75,1
-8,Leche,175,1
-9,Aceite,200,1
-10,Chocolate,250,0
-11,Alfajor,50,0
-12,Azucar,150,1
-13,Sal,125,1
-14,Papas Fritas,200,0
+1,Arroz,125.2,1
+2,Pan,150.0,1
+3,Jabon,50.0,1
+4,Champu,200.0,1
+5,Pasta de dientes,120.0,1
+6,Carne,500.0,1
+7,Huevo,75.0,1
+8,Leche,175.0,1
+9,Aceite,200.0,1
+10,Chocolate,250.0,0
+11,Alfajor,50.0,0
+12,Azucar,150.0,1
+13,Sal,125.0,1
+14,Papas Fritas,200.0,0
+15,Cinta Scotch,50.5,0

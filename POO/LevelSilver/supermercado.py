@@ -18,7 +18,17 @@ Por ejemplo, el arroz puede ser un producto de primera necesidad con un descuent
 con un decuento del 11%. Esto es sólo un ejemplo. El descuento a aplicar en cada producto de primera necesidad debe ser configurable al momento de crearlo.
 """
 
-# Clases
+# Clases\agentemaxo
+
+
+class Super:
+    def __init__(self, nombre, direccion, telefono):
+        self.nombre = nombre
+        self.direccion = direccion
+        self.telefono = telefono
+
+    def __str__(self):
+        return f"Supermercado {self.nombre} / Dirección: {self.direccion} / Teléfono: {self.telefono}"
 
 
 class Producto:
@@ -70,6 +80,9 @@ class Producto:
     def setPrecioCuidado(self, nuevo):
         self.precio_cuidado = nuevo
 
+    def devolver_atributos(self):
+        return [self.codigo, self.nombre, self.precio, self.primera_necesidad]
+
 
 # Funciones
 def obtener_txt_como_objetos(nombre_archivo):
@@ -88,6 +101,20 @@ def obtener_txt_como_objetos(nombre_archivo):
             objeto = Producto(cod, nom, pre, prim)
             lista_articulos.append(objeto)
         return lista_articulos
+
+
+def cargar_lista_a_archivo(nombre_archivo, lista):
+    with open(nombre_archivo, "w") as arch:
+        for i in lista:
+            x = i.devolver_atributos()
+            booleano = x[3]
+            if booleano:
+                l = 1
+            else:
+                l = 0
+            arch.write(f"{x[0]},{x[1]},{x[2]},{l}\n")
+        arch.close()
+        return arch
 
 
 def buscarProd(lista, num):
@@ -194,14 +221,37 @@ def modif_articulo(lista):
                 break
 
 
+def estadistica(lista):
+    cont_art = 0
+    acu_mont = 0
+    for i in lista:
+        cont_art = cont_art + 1
+        acu_mont = acu_mont + i.getPrecio()
+    print(
+        f"La cantidad de artículos que comercializa el Super es de : {cont_art}")
+    print(
+        f"El monto acumulado de todos los artículos que tenemos es de:  {acu_mont}")
+
+
+def reindexar(lista):
+    j = 1
+    for i in lista:
+        i.setCodigo(j)
+        j += 1
+
+
 # Programa
+sup = Super("Don Atilo", "Av. 9 de Julio", 3652655565)
 print("Bienvenidos a mi programa!!")
+print("-------------------------------------------------------------")
+print(f"{sup}")
+print("-------------------------------------------------------------")
 
 lista_articulos = obtener_txt_como_objetos("lista_productos.txt")
 monto_ingresado_dia = []
 
 while True:
-    op = input("Que desea hacer? \n 1- Registrar una compra \n 2- Buscar artículo \n 3- Agregar artículo \n 4- Eliminar Artículo \n 5- Modificar Artículo \n 6- Salir \n\n Ingrese:\t")
+    op = input("Que desea hacer? \n 1- Registrar una compra \n 2- Buscar artículo \n 3- Agregar artículo \n 4- Eliminar Artículo \n 5- Modificar Artículo \n 6- Listar todos los productos \n 7- Salir \n\n Ingrese:\t")
 
     if op == "1":
         registrar_compra(lista_articulos, monto_ingresado_dia)
@@ -220,5 +270,15 @@ while True:
     elif op == "5":
         modif_articulo(lista_articulos)
     elif op == "6":
+        for i in lista_articulos:
+            print(i)
+    elif op == "7":
         break
+    print("-----------------------------------------------------------------------------------")
 print("Gracias por utilizar el programa del Super!")
+
+estadistica(lista_articulos)
+reindexar(lista_articulos)
+cargar_lista_a_archivo("lista_productos.txt", lista_articulos)
+
+print("-----------------------------------------------------------------------------------")
