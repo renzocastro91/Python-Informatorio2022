@@ -272,6 +272,7 @@ while True:
         break
     print("-----------------------------------------------------------------------------------")
 print("Gracias por utilizar el programa del Super!")
+print("-----------------------------------------------------------------------------------")
 
 estadistica(lista_articulos)
 reindexar(lista_articulos)
