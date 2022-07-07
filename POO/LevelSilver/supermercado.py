@@ -130,15 +130,13 @@ def buscarProd(lista, num):
 def registrar_compra(listaA, listaM):
     monto = 0
     while True:
-        cod = int(
-            input("Ingrese código de producto o 0 para finalzar el registro\t"))
+        cod = int(input("Ingrese código de producto o 0 para finalzar el registro\t"))
         if cod != 0:
             x = buscarProd(listaA, cod)
             if x != 0:
                 print("Producto Encontrado")
                 print(x)
-                c = input(
-                    "Desea incluir al producto en precios cuidados? s o n\n\nIngrese:\t")
+                c = input("Desea incluir al producto en precios cuidados? s o n\n\nIngrese:\t")
                 if c.lower() == "s":
                     x.setPrecioCuidado(True)
                     monto = monto + x.getPrecio() * 0.9
@@ -200,8 +198,7 @@ def modif_articulo(lista):
                 x.setPrecio(pre)
                 print("Producto Modificado")
             elif op == "3":
-                c = input(
-                    "Es Producto de primera necesidad? s o n \n Ingreese:\t")
+                c = input("Es Producto de primera necesidad? s o n \n Ingreese:\t")
                 if c.lower() == "s":
                     pri = True
                 else:
@@ -227,10 +224,8 @@ def estadistica(lista):
     for i in lista:
         cont_art = cont_art + 1
         acu_mont = acu_mont + i.getPrecio()
-    print(
-        f"La cantidad de artículos que comercializa el Super es de : {cont_art}")
-    print(
-        f"El monto acumulado de todos los artículos que tenemos es de:  {acu_mont}")
+    print(f"La cantidad de artículos que comercializa el Super es de : {cont_art}")
+    print(f"El monto acumulado de todos los artículos que tenemos es de:  {acu_mont}")
 
 
 def reindexar(lista):
@@ -242,6 +237,7 @@ def reindexar(lista):
 
 # Programa
 sup = Super("Don Atilo", "Av. 9 de Julio", 3652655565)
+print("-------------------------------------------------------------")
 print("Bienvenidos a mi programa!!")
 print("-------------------------------------------------------------")
 print(f"{sup}")
