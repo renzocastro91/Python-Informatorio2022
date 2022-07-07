@@ -112,6 +112,9 @@ class Pedido:
 
 
 def menu_cocina(lista_pedidos, lista_monto):
+    print("--------------------------------------------")
+    print("Sistema de la Cocina")
+    print("--------------------------------------------")
     print("Ha llegado un nuevo pedido!!!!")
     print(lista_pedidos[-1])
     while True:
@@ -235,16 +238,31 @@ def menu_cliente(lista_p, lista_pedidos, lista_monto):
 
     lista_pedidos.append(pedido)
 
-    menu_cocina(lista_pedidos, lista_monto)
-
     print("Muchas gracias por utilizar la APP de Pizzería Don Carlos")
+
+    menu_cocina(lista_pedidos, lista_monto)
 
 
 def buscar_pizzas_variedades_mas_pedidas(lista):
     print("Variedad Mas vendida del día")
-    print(max(set(lista.getNombre()), key=lista.count))
+    x = []
+    y = []
+    for i in lista:
+        x.append(i.getNombre())
+        y.append(i.getTipo())
+    print(max(set(x), key=x.count))
     print("Tipo de Pizza mas vendidas del día")
-    print(max(set(lista.getNombre()), key=lista.count))
+    print(max(set(y), key=x.count))
+
+
+def recaudacion_del_dia(lista):
+    print("Recaudación del día")
+    print(f"${sum(lista)}")
+
+
+def cant_pedidos_monto(lista1, lista2):
+    print(f"Cantidad de Pedidos del día --> {len(lista2)}")
+    recaudacion_del_dia(lista1)
 
 
 # Programa
@@ -260,9 +278,14 @@ while True:
         menu_cliente(lista_pizza, lista_pedido, lista_monto)
     elif op == "2":
         break
-
+    print("-----------------------------------------------------------")
 # Variedades y tipos de pizzas más pedidas por los clientes.
 buscar_pizzas_variedades_mas_pedidas(lista_pizza)
 
 
 # Ingresos (recaudaciones) por períodos de tiempo.
+recaudacion_del_dia(lista_monto)
+
+
+# Pedidos (cantidad y monto) por períodos de tiempo.
+cant_pedidos_monto(lista_monto, lista_pedido)
