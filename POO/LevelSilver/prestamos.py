@@ -33,9 +33,9 @@ Las reglas que debe respetar este proyecto son las siguientes:
 
 Además debes tener en cuenta que:
 
-1- Existe una fecha máxima para la autorización de los préstamos. 
+1- Existe una fecha máxima para la autorización de los préstamos. --> primeros 20 dias del mes
 
-2- Existe un valor máximo a prestar. La sumatoria de los préstamos que se ingresen no debe exceder este valor.  
+2- Existe un valor máximo a prestar. La sumatoria de los préstamos que se ingresen no debe exceder este valor. --> $200.000  
 
 3- Debe permitir la carga de tantos préstamos como desee ingresar el usuario, a menos que se haya llegado al valor máximo a prestar.  
 
@@ -43,7 +43,7 @@ Además debes tener en cuenta que:
 """
 
 class Solicitante:
-    def __init__(self,dni,primerNombre,primerApellido,segundoApellido="",telFijo,cel):
+    def __init__(self,dni,primerNombre,primerApellido,telFijo,cel,segundoApellido=""):
         self.dni = dni
         self.primerNombre = primerNombre
         self.primerApellido = primerApellido
@@ -52,7 +52,7 @@ class Solicitante:
         self.cel = cel
 
     def __str__(self):
-        if segundoApellido != "":
+        if self.segundoApellido != "":
             return f"SOlicitante--> DNI: {self.dni} / Primer Apellido: {self.primerApellido} Segundo Apellido: {self.segundoApellido} Primer Nombre: {self.primerNombre} / Tel. Fijo: {self.telFijo} / Celular: {self.cel}"
         else:
             return f"SOlicitante--> DNI: {self.dni} / Apellido: {self.primerApellido} Primer Nombre: {self.primerNombre} / Tel. Fijo: {self.telFijo} / Celular: {self.cel}"
@@ -108,13 +108,13 @@ class FechaPago:
         for i in x:
             if i != 0:
                 cont += 1
-        if cont = 2:
+        if cont == 2:
             return f"1ra Cuota: {self.primeraCuota} / 2da Cuota: {self.segundaCuota}"
-        elif cont = 3:
+        elif cont == 3:
             return f"1ra Cuota: {self.primeraCuota} / 2da Cuota: {self.segundaCuota} / 3ra Cuota: {self.terceraCuota}"
-        elif cont = 4:
+        elif cont == 4:
             return f"1ra Cuota: {self.primeraCuota} / 2da Cuota: {self.segundaCuota} / 3ra Cuota: {self.terceraCuota} / 4ta Cuota: {self.cuartaCuota}"
-        elif cont = 5:
+        elif cont == 5:
             return f"1ra Cuota: {self.primeraCuota} / 2da Cuota: {self.segundaCuota} / 3ra Cuota: {self.terceraCuota} / 4ta Cuota: {self.cuartaCuota} / 5ta Cuota: {self.quintaCuota}"
         else:
             return f"1ra Cuota: {self.primeraCuota} / 2da Cuota: {self.segundaCuota} / 3ra Cuota: {self.terceraCuota} / 4ta Cuota: {self.cuartaCuota} / 5ta Cuota: {self.quintaCuota} / 6ta Cuota: {self.sextaCuota}"
@@ -164,6 +164,9 @@ class Prestamo:
         self.fecha_autorizacion = fecha_autorizacion
         self.fechaEntrega = fechaEntrega
 
+    def __str__(self):
+        return f"N° Prestamo: {self.nroPrestamo} \n Solicitante: {self.solicitante} \n Valor del Prestamo: ${self.valorPrestamo} \n Fecha de Autorización: {self.fecha_autorizacion} \n Fecha de Entrega: {self.fechaEntrega} \n Fechas de Pago: {self.fechas_pago}"
+
     def getNroPrestamo(self):
         return self.nroPrestamo
     
@@ -201,6 +204,9 @@ class Prestamo:
         self.fechaEntrega = nuevo
     
 #Funciones
+from datetime import datetime
+from datetime import timedelta
+
 def buscarSolitante(lista):
     dni = int(input("Ingrese DNI del solicitante:\t"))
     m = 0
@@ -222,8 +228,131 @@ def cargaSolicitante():
         segundoApellido = ""
     telFijo = int(input("Ingrese Teléfono Fijo:\t"))
     cel = int(input("Ingrese Nro de celular:\t"))
-    objeto = Solicitante(dni,primerNombre,primerApellido,segundoApellido,telFijo,cel)
+    objeto = Solicitante(dni,primerNombre,primerApellido,telFijo,cel,segundoApellido)
     return objeto
 
-def cargarFechasPagos():
-    num = 
+def cargarFechasPagos(fecha):
+    num = input("En cuántas cuotas desea pagar? Mínimo = 1 / Máximo = 6")
+    if num == "1":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = 0
+        terceraCuota = 0
+        cuartaCuota = 0
+        quintaCuota = 0
+        sextaCuota = 0
+    elif num == "2":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = primeraCuota + timedelta(days=30)
+        terceraCuota = 0
+        cuartaCuota = 0
+        quintaCuota = 0
+        sextaCuota = 0
+    elif num == "3":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = primeraCuota + timedelta(days=30)
+        terceraCuota = segundaCuota + timedelta(days=30)
+        cuartaCuota = 0
+        quintaCuota = 0
+        sextaCuota = 0
+    elif num == "4":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = primeraCuota + timedelta(days=30)
+        terceraCuota = segundaCuota + timedelta(days=30)
+        cuartaCuota = terceraCuota + timedelta(days=30)
+        quintaCuota = 0
+        sextaCuota = 0
+    elif num == "5":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = primeraCuota + timedelta(days=30)
+        terceraCuota = segundaCuota + timedelta(days=30)
+        cuartaCuota = terceraCuota + timedelta(days=30)
+        quintaCuota = cuartaCuota + timedelta(days=30)
+        sextaCuota = 0
+    elif num == "6":
+        primeraCuota = fecha + timedelta(days=30)
+        segundaCuota = primeraCuota + timedelta(days=30)
+        terceraCuota = segundaCuota + timedelta(days=30)
+        cuartaCuota = terceraCuota + timedelta(days=30)
+        quintaCuota = cuartaCuota + timedelta(days=30)
+        sextaCuota = quintaCuota + timedelta(days=30)
+    else:
+        print("Opción ingresada incorrecta")
+    objetofecha = FechaPago(primeraCuota,segundaCuota,terceraCuota,cuartaCuota,quintaCuota,sextaCuota)
+    return objetofecha
+
+def autorizacion(fecha):
+    dia = int(format(fecha.day))
+    if dia >= 1 and dia <= 20:
+        return True
+    else:
+        return False
+
+def puedepedir(lista,sol):
+    mont_acu = 0
+    for i in lista:
+        if i.getSolicitante().getDNI() == sol.getDNI(): 
+            mont_acu = mont_acu + i.getValorPrestamo()
+    return mont_acu
+   
+def buscarnrosprestamos(lista,sol):
+    cont = 0
+    for i in lista:
+        if i.getSolicitante().getDNI() == sol.getDNI():
+            cont += 1
+    return cont
+
+def menuPrestamo(lista):
+    print("----------------------------------------------------------------------------")
+    print("Menú de Prestamo")
+    print("----------------------------------------------------------------------------")
+    solicitante = cargaSolicitante()
+    montos_prestamos = puedepedir(lista,solicitante)
+    valorPrestamo = float(input("Ingrese el valor del prestamo que desea pedir:\t$"))
+    if montos_prestamos + valorPrestamo <= 200000:
+        fecha_hoy = datetime.today()
+        nro_prestamo = buscarnrosprestamos(lista,solicitante) + 1
+        if autorizacion(fecha_hoy):
+            fecha_autorizacion = fecha_hoy
+        else:
+            dia = int(format(fecha_hoy.day))
+            fecha_autorizacion = fecha_hoy - timedelta(days=dia)
+            fecha_autorizacion = fecha_autorizacion + timedelta(days=32)
+        fecha_entrega = fecha_autorizacion + timedelta(days=7)
+        fechas_pagos = cargarFechasPagos(fecha_entrega)
+        objeto = Prestamo(nro_prestamo,solicitante,valorPrestamo,fechas_pagos,fecha_autorizacion,fecha_entrega)
+        print("----------------------------------------------------------------------------")
+        print("Prestamo")
+        print("----------------------------------------------------------------------------")
+        print(objeto)
+        lista.append(objeto)
+    else:
+        print("No puede pedir mas prestamos, excedió el límite")
+        print(f"Si quiere realizar otro prestamo, tiene que ser por el monto menor igual a ${200000 - montos_prestamos}")
+    
+def mostrarprestamos(lista):
+    dni = int(input("Ingrese DNI:\t"))
+    print("----------------------------------------------------------------------------")
+    print("Lista de Prestamos")
+    print("----------------------------------------------------------------------------")
+    for i in lista:
+        if i.getSolicitante().getDNI() == dni:
+            print(i)
+            print("----------------------------------------------------------------------------")           
+    print("----------------------------------------------------------------------------")
+
+#Programa
+
+print("Bievenidos al sistema de Prestamos del Banco XxXxX")
+lista_prestamos = []
+while True:
+    op = input("Que desea hacer? \n 1- Pedir un prestamo \n 2- Mostrar Lista de prestamos \n 3- Salir\n Ingresa:\t")
+    if op == "1":
+        menuPrestamo(lista_prestamos)
+    elif op == "2":
+        mostrarprestamos(lista_prestamos)
+    elif op == "3":
+        break
+
+print("----------------------------------------------------------------------------")
+print("Gracias por utilizar el sistema del Banco")
+print("----------------------------------------------------------------------------")
