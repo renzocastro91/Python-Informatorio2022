@@ -4,9 +4,9 @@ Nos piden que diseñemos un programa para gestionar donaciones de alimentos.
 
 Los productos tienen los siguientes atributos:
 
-Nombre
+*Nombre
 
-Cantidad
+*Cantidad
 
 Tenemos dos tipos de productos:
 
