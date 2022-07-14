@@ -17,7 +17,7 @@ class Producto:
         return self.cantidad
     
     def setCantidad(self,nuevo):
-        self.cantidad = self.cantidad - nuevo
+        self.cantidad = nuevo
     
 
 class Perecedero(Producto):
