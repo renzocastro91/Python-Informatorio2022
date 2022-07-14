@@ -30,72 +30,36 @@ Si fuera No Perecedero, se informa cuántos productos se entregarán por entidad
 siempre que no supere el mes.
 
 """
+from clases import *
+import funciones
 
-#Clases
-class Producto:
-    def __init__(self,nombre,cantidad):
-        self.nombre = nombre
-        self.cantidad = cantidad
-    
-    def __str__(self):
-        return f"Nombre: {self.nombre} / Cantidad: {self.cantidad}"
+#Programa
+print("Bienvenidos al programa de Gestión de Donaciones")
+p1 = Perecedero("Carne",500,5)
+p2 = Perecedero("Pollo",600,3)
+p3 = Perecedero("Leche",700,7)
+p4 = Perecedero("Queso",700,55)
+p5 = Perecedero("Huevos",1000,45)
+p6 = NoPerecedero("Mermerlada",600,"2")
+p7 = NoPerecedero("Arroz",7000,"1")
+p8 = NoPerecedero("Tomate En Lata",6000,"1")
 
-    def getNombre(self):
-        return self.nombre
-    
-    def setNombre(self,nuevo):
-        self.nombre = nuevo
-    
-    def getCantidad(self):
-        return self.cantidad
-    
-    def setCantidad(self,nuevo):
-        self.cantidad = self.cantidad + nuevo
-    
-class Perecedero(Producto):
-    def __init__(self, nombre, cantidad,dias_a_caducar):
-        super().__init__(nombre, cantidad)
-        self.dias_a_caducar = dias_a_caducar
-    
-    def __str__(self):
-        return super().__str__() + f"/ Días a Caducar: {self.dias_a_caducar}"
-    
-    def getDiasACaducar(self):
-        return self.dias_a_caducar
-    
-    def setDiasACaducar(self,nuevo):
-        self.dias_a_caducar = nuevo
+lista = ListaProductos()
+lista.agregarProducto(p1)
+lista.agregarProducto(p2)
+lista.agregarProducto(p3)
+lista.agregarProducto(p4)
+lista.agregarProducto(p5)
+lista.agregarProducto(p6)
+lista.agregarProducto(p7)
+lista.agregarProducto(p8)
 
-class NoPerecedero(Producto):
-    def __init__(self, nombre, cantidad, tipo):
-        super().__init__(nombre, cantidad)
-        self.tipo = tipo
+marca = 1
+while marca == 1:
+    x = funciones.menu(lista,marca)
+    if x == 0:
+        break
+    print("-----------------------------------------------")
+print("Gracias por utilizar el programa de Gestión de Donaciones!!!")
 
-    def __str__(self):
-        return super().__str__() + f"/ Tipo: {self.tipo}"
-
-    def getTipo(self):
-        return self.tipo
-    
-    def setTipo(self,nuevo):
-        self.tipo = nuevo
-
-class ListaProductos:
-    def __init__(self,listaproductos = []):
-        self.listaproductos = listaproductos
-
-    def agregarProducto(self,elemento):
-        self.listaproductos.append(elemento)
-
-    def mostrarProductos(self):
-        print("----------------------------------")
-        print("Lista de Productos")
-        print("----------------------------------")
-        for i in self.listaproductos:
-            print(i)
-    
-    def Calcular(self):
-        
-#Funciones
-def Calcular(objeto_ListaProductos,cantidad,producto,entidades):
 
