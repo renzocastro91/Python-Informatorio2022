@@ -24,3 +24,34 @@ Eliminar un producto: dado un ID, eliminar el producto del depósito.
 Mostrar información: mostramos para cada bebida toda su información.
 
 """
+
+from clases import *
+import funciones
+
+print("Bienvenidos al programa de Bebidas Online!")
+
+listabebidas = Almacen()
+b1 = AguaMineral(1,3,"Villa Vicencio",200.0,"Manantial")
+b2 = AguaMineral(2,5,"Villa Vicencio",400.0,"Manantial")
+b3 = AguaMineral(3,3,"El Marinero",250.25,"Ciudad")
+b4 = AguaMineral(4,4,"El Holandés",200.25,"Manantial")
+b5 = Gaseosa(5,3,"Zeko",150.25,45)
+b6 = Gaseosa(6,3,"Coca Cola",250.50,70)
+b7 = Gaseosa(7,5,"7UP",350.50,40)
+
+listabebidas.agregarBebida(b1)
+listabebidas.agregarBebida(b2)
+listabebidas.agregarBebida(b3)
+listabebidas.agregarBebida(b4)
+listabebidas.agregarBebida(b5)
+listabebidas.agregarBebida(b6)
+listabebidas.agregarBebida(b7)
+
+marca = 1 
+
+while marca == 1:
+    x = funciones.menu(listabebidas,marca)
+    if x == 0:
+        break
+    print("--------------------------------------------------------")
+print("Gracias por utilizar el programa de Bebidas Online")
