@@ -18,3 +18,29 @@ agregarCafe(int): añade a la cafetera la cantidad de café indicada.
 
 Cómo quedaría ese programa? Probalo.
 """
+
+from clases import *
+import funciones
+
+print("Bienvenidos a la Cafetera Robot!!")
+
+cafetera = Cafetera()
+
+while True:
+    op = input("Que desea hacer? \n1- Llenar Cafetera \n2- Servir Taza \n3- Vaciar Cafetera \n4- Agregar Café \n5- Mostrar Estado de Cafetera \n6- Salir \nIngrese:\t")
+    if op == "1":
+        funciones.llenarCafetera(cafetera)
+    elif op == "2":
+        funciones.servirTaza(cafetera)
+    elif op == "3":
+        funciones.vaciarCafetera(cafetera)
+    elif op == "4":
+        funciones.agregarCafe(cafetera)
+    elif op == "5":
+        funciones.mostrarestadocafetera(cafetera)
+    elif op == "6":
+        break
+    else:
+        print("Opción ingresada incorrecta")
+    print("-----------------------------------------------------------------------------------------")
+print("Gracias por utilizar la Cafetera Robot!!")
