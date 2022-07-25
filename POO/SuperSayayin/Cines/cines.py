@@ -23,5 +23,4 @@ proyección son los que determinan el precio de la entrada, que también pueden 
 Las funciones admiten ciertos tipos de entradas y otros no, dependiendo de factores como: horarios, calificación de las películas, etc. Por ejemplo: si una 
 película está calificada como para mayores de 16 años, para esa función no se pueden vender entradas de TIPO = MENOR. Cada función tiene asociado un tipo de función, 
 que determina si la función es un preestreno, un estreno, una función normal. 
-
 """
